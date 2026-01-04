@@ -46,11 +46,11 @@
 - Todas las interacciones de la API son registradas mediante `logger` (en `app.py`).
 - El log contiene información de las solicitudes, errores, y excepciones, y está configurado para rotar diariamente.
 
-![Diagrama](https://github.com/user-attachments/assets/4c9a70ed-bcdb-42ad-90ae-8b3363a24205)
+![Diagrama](https://github.com/user-attachments/assets/9c0126ca-61c9-4c1c-96b3-9a626a59a90b)
 
 ## Descripción del flujo:
 
-1. **API Gateway (Flask)**: El cliente realiza una solicitud HTTP (GET, POST, PUT, DELETE). Flask recibe esta solicitud y pasa los datos a través de los controladores.
+1. **API Gateway (Flask)**: El cliente realiza una solicitud HTTP (GET, POST, PUT, DELETE). Flask recibe esta solicitud, la registra utilizando logging y pasa los datos a través de los controladores.
 2. **Controlador (app.py)**: El controlador verifica que los datos estén bien formateados y llama a los servicios correspondientes.
 3. **Servicios**: Los servicios realizan la lógica de negocio y manipulan los datos, ya sea creando, actualizando, buscando o eliminando registros.
 4. **Base de Datos**: Los servicios interactúan con la base de datos a través de SQLAlchemy.

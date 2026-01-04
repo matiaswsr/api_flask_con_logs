@@ -50,20 +50,13 @@
 
 ## Descripción del flujo:
 
-1. **API Gateway (Flask)**: El cliente realiza una solicitud HTTP (GET, POST, PUT, DELETE). Flask recibe esta solicitud, la registra utilizando logging y pasa los datos a través de los controladores.
-2. **Controlador (app.py)**: El controlador verifica que los datos estén bien formateados y llama a los servicios correspondientes.
-3. **Servicios**: Los servicios realizan la lógica de negocio y manipulan los datos, ya sea creando, actualizando, buscando o eliminando registros.
-4. **Base de Datos**: Los servicios interactúan con la base de datos a través de SQLAlchemy.
-5. **Utilidades**: Se validan los datos como los correos electrónicos o fechas antes de procesar cualquier solicitud.
-6. **Logging**: Todo el proceso se registra en los archivos de log, lo que permite monitorear las solicitudes, respuestas, errores y excepciones.
+0. **API Gateway (Flask)**: El cliente realiza una solicitud HTTP (GET, POST, PUT, DELETE). Flask recibe esta solicitud, la registra utilizando logging y pasa los datos a través de los controladores.
+1. **Logging**: Todo el proceso se registra en los archivos de log, lo que permite monitorear las solicitudes, respuestas, errores y excepciones. 
+2. **Controlador (app.py)**: El controlador recibe la solicitud y verifica que los datos estén bien formateados, posteriormente llama a los servicios correspondientes.
+3. **Utilidades**: Se validan los datos como los correos electrónicos o fechas antes de procesar cualquier solicitud.
+4. **Servicios**: Los servicios realizan la lógica de negocio y manipulan los datos, ya sea creando, actualizando, buscando o eliminando registros.
+5. **Base de Datos**: Los servicios interactúan con la base de datos a través de SQLAlchemy.
 
 Este diagrama proporciona una visión clara de cómo los diferentes componentes de la API interactúan entre sí y facilita la documentación.
-
-
-
-
-
-
-
 
 
